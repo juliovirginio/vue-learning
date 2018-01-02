@@ -1,4 +1,4 @@
-<html>
+﻿<html>
 
 <head>
 	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
@@ -10,8 +10,8 @@
 	  <input v-on:keyup="search" v-model="query" placeholder="Make your query...">
 	  <div >
 		<ol>
-			<li v-for="result in found">  <!-- Iterates over list of "found" items-->
-				{{ result }}  <!-- Gives the corresponding text -->
+			<li v-for="result in found">
+				{{ result }}
 			</li>
 		</ol>
 	  </div>
@@ -48,8 +48,8 @@
 					   var cidade = estado.cidades[j];
 					   var match = cidade.toLowerCase().indexOf(this.query.toLowerCase()) !== -1;
 					   if (match) {
-                match = cidade + ' - ' + estado.sigla;
-                this.found.push(match);
+						 match = cidade + ' - ' + estado.sigla;
+						 this.found.push(match);
 					   }
 					}
 				}
@@ -63,3 +63,4 @@
 </body>
 
 </html>
+
